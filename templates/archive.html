@@ -1,0 +1,31 @@
+{% extends "common/main.html" %}
+{% block title %}
+<title>Archive</title>
+{% end %}
+  <style>
+    ul.archive {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    ul.archive li {
+      margin-bottom: 1em;
+    }
+
+    ul.archive .title {
+      font-family: "Helvetica Nue", Helvetica, Arial, sans-serif;
+      font-size: 14pt;
+    }
+  </style>
+
+{% block body %}
+  <ul class="archive">
+    {% for entry in entries %}
+      <li>
+        <div class="title"><a href="/article/{{entry['url']}}">{{ entry['title'] }}</a></div>
+        <div class="date">{{entry['created']}}</div>
+      </li>
+    {% end %}
+  </ul>
+{% end %}

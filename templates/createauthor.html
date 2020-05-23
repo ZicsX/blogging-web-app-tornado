@@ -1,0 +1,26 @@
+{% extends "./common/main.html" %}
+{% block title %}
+<title>{{title}}</title>
+{% end %}
+{% block body %}
+	<center> 
+		<h1>Create Account</h1>
+	</center>
+        <table class="table">
+            <tbody>
+                <form action="/auth/create" method="post">
+                    <tr>
+                        <td>Username：</td>
+                        <td><input class="finput" type="text" name="username"></td>
+                    </tr>
+                    <tr>
+                        <td>Password：</td>
+                        <td><input class="finput" type="password" name="password"></td>
+                    </tr>
+                    <tr>
+                       <td><input class="btn" type="submit" value="Go"></td>
+                    </tr>
+                </form>
+            </tbody>
+        </table>
+{% end %}

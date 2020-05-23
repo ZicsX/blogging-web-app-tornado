@@ -1,0 +1,6 @@
+tornado
+mysql
+mysql-connector-python
+markdown2
+bcrypt
+configparser

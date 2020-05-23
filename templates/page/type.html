@@ -1,0 +1,30 @@
+{% extends "../common/main.html" %}
+{% block title %}
+<title>CATEGORY</title>
+{% end %}
+{% block body %}
+    <h2>type1</h2>
+    <ul class="type-list">
+    {% for l in type1 %}
+        <li>
+            <a class='i_title' u="{{l['url']}}">{{l['title']}}</a>
+        </li>
+    {% end %}
+    </ul>
+<h2>type2</h2>
+    <ul class="type-list">
+    {% for l in type2 %}
+        <li>
+            <a class='i_title' u="{{l['url']}}">{{l['title']}}</a>
+        </li>
+    {% end %}
+    </ul>
+<h2>Other</h2>
+    <ul class="type-list">
+    {% for l in other %}
+        <li>
+            <a class='i_title' u="{{l['url']}}">{{l['title']}}</a>
+        </li>
+    {% end %}
+    </ul>
+{% end %}

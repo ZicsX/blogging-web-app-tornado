@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block title %}
+    {% end %}
+    <link rel="stylesheet" href={{ static_url("css/style.css") }}>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="shortcut icon" href="{{ static_url('img/favicon.ico') }}">
+
+    <meta content='width=device-width, initial-scale=1.0, user-scalable=no' name='viewport'>
+</head>
+<body>
+    <div class="main">
+    {% block header %}
+        <header>
+        <div class="logo">
+
+			<h1 style="color:#00A4EF;font-size:45px;" >BLOG</h1>
+        </div>
+        <nav>
+            <ul>
+				<li><a href="/">HOME</a></li>
+				<li><a href="/type">CATEGORY</a></li>
+				<li><a href="/about">ABOUT</a></li>
+                <li><a href="/publish">PUBLISH</a></li>
+            </ul>
+        </nav>
+        </header>
+{% end %}
+
+    <div class="content" id = "content">
+        {% block body %}{% end %}
+    </div>
+    </div>
+    <footer>
+            {% block footer %}
+				<a href="/signin">SignIn</a>
+				<a href="/auth/create">Create Author</a>
+            {% end %}
+    </footer>
+    <script src="{{ static_url('js/jquery-2.1.4.js') }}"></script>
+    <script src="{{ static_url('js/main.js') }}"></script>
+</body>
+</html>
